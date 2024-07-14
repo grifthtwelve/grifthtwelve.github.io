@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -34,13 +33,11 @@
             font-family: 'Oswald';
             z-index: 3;
             font-weight: 350; /* Puedes ajustar el peso de la fuente según tus necesidades */
-            cursor: default
         }
 
         /* Estilos CSS para el texto principal (MARIO OLAYA) */
         .portfolio-text {
             position: absolute;
-            width: 100%;
             top: 28.5%;
             left: 50%;
             transform: translate(-50%, -50%);
@@ -50,7 +47,6 @@
             z-index: 1;
             letter-spacing: 6px;
             font-weight: 400; /* Puedes ajustar el peso de la fuente según tus necesidades */
-            cursor: default
         }
 
         /* Estilos CSS para el texto adicional (PROGRAMMER - GAME DEVELOPER - WEB DEVELOPER) */
@@ -64,7 +60,6 @@
             font-family: 'Poppins';
             z-index: 1;
             font-weight: 400; /* Puedes ajustar el peso de la fuente según tus necesidades */
-            cursor: default
         }
 
         /* Estilos CSS para el texto dentro de About Me */
@@ -78,12 +73,13 @@
             font-family: 'Poppins';
             z-index: 3;
             font-weight: 400; /* Puedes ajustar el peso de la fuente según tus necesidades */
+            pointer-events: none; /* Evita que el texto sea detectable */
             width: 55%;
-            cursor: default
         }
 
         /* Estilos CSS para las imágenes */
         .portfolio-image, .additional-image, .overlay-image, .vv-image, .settings-image, .close-image {
+            user-drag: none;
             -webkit-user-drag: none;
         }
 
@@ -169,21 +165,18 @@
         /* Estilos CSS para las palabras */
         .nav-words {
             position: absolute;
-            bottom: 85px;
+            bottom: 75px;
             width: 100%;
             text-align: center;
             color: white;
             font-family: 'Poppins';
-            font-size: 25px;
+            font-size: 24px;
             z-index: 4;
-            font-weight: 400; /* Puedes ajustar el peso de la fuente según tus necesidades */
+            font-weight: 300; /* Puedes ajustar el peso de la fuente según tus necesidades */
         }
-        .nav-words span {
-    margin: 0 30px; /* 30px total separation between words */
-}
 
-        /* Estilos CSS para las palabras sociales */
-        .nav-wordssocial {
+                /* Estilos CSS para las palabras sociales */
+                .nav-wordssocial {
             position: absolute;
             top: 370%;
             width: 100%;
@@ -193,7 +186,6 @@
             font-size: 30px;
             z-index: 5;
             font-weight: 300; /* Puedes ajustar el peso de la fuente según tus necesidades */
-            cursor: pointer;
         }
 
 .nav-wordssocial span {
@@ -376,6 +368,7 @@
 
         .additional-gray-rectangle.show {
             opacity: 1;
+            pointer-events: auto; /* Permite la interacción cuando se muestra */
         }
 
         /* Estilos CSS para el rectángulo gris adicional debajo de GALLERY */
@@ -442,22 +435,12 @@
                 font-size: 24vw;
             }
 
-            .About-text {
-                font-size: 21vw;
-                width: 100%;
-                top: 116.0%;
-            }
-
             .Gallery-text {
-                font-size: 21vw;
-                width: 100%;
-                top: 197.8%;
+                font-size: 30vw;
             }
 
             .Projects-text {
-                font-size: 21vw;
-                width: 100%;
-                top: 280.1%;
+                font-size: 26.5vw;
             }
 
             .developer-text {
@@ -468,23 +451,16 @@
                 width: 1vw;
             }
 
-            .nav-words{
-                bottom: 45px;
-                font-size: 4vw
-            }
-
-            .nav-words span{
-                margin: 50px 30px;
+            .nav-words {
+                font-size: 4vw;
             }
 
             .nav-wordssocial {
                 font-size: 4vw;
-                top: 395%;
             }
 
             .nav-word {
-                font-size: 4vw;
-                bottom: 500px;
+                margin: 0 10px;
             }
 
             .vv-image {
@@ -508,10 +484,10 @@
             }
 
             .staytunned {
-                font-size: 23.7vw;
+                font-size: 25vw;
             }
 
-            .developer-text2 {
+            .developer-text2{
                 font-size: 3vw;
                 width: 90%;
             }
@@ -520,54 +496,54 @@
     </style>
 </head>
 <body>
-    <img class="additional-image" src="https://raw.githubusercontent.com/grifthtwelve/Repository/main/Backgru2.jpg" draggable="false">
+    <img class="additional-image" src="https://raw.githubusercontent.com/grifthtwelve/Repository/main/Carpeta1/Backgru2.jpg" draggable="false" style="user-select: none;">
     <div class="portfolio-container">
         <h0 class="staytunned" style="user-select: none;">CONTACT</h0>
-        <h1 translate="no" class="portfolio-text" style="user-select: none;">MARIO OLAYA</h1>
+        <h1 class="portfolio-text" style="user-select: none;">MARIO OLAYA</h1>
         <h2 class="developer-text" style="user-select: none;">PROGRAMMER - GAME DEVELOPER - WEB DEVELOPER</h2>
         <h3 id="aboutSection" class="About-text" style="user-select: none;">ABOUT</h3>
         <h4 id="GallerySection" class="Gallery-text" style="user-select: none;">GALLERY</h4>
         <h5 id="ProjectsSection" class="Projects-text" style="user-select: none;">PROJECTS</h5>
-        <h6 class="developer-text2" id="developerText2" style="max-width: 100%; opacity: 0; transition: opacity 0.5s;"><strong>About Me</strong><br><br>Hello! I am Mario, someone passionate and creative with a great taste for web design, programming and graphic design. Since I began to delve into this world, I felt identified with it, because it is quite interesting and offers us many possibilities to expand the knowledge about our businesses and ideas through the digital world.<br><br><strong>What I do?</strong><br>Web Development: I specialize in creating responsive, visually appealing websites that provide the best user experience. I want to include on this page a variety of projects, from personal to complex commerce platforms, and thus show my clients examples and a clear and realistic vision of how their page could look.<br><br>Thank you for being interested in knowing more about me, I hope you have a good experience with me. :)</h6>
-        <img class="portfolio-image" style="user-select: none;" src="https://raw.githubusercontent.com/grifthtwelve/Repository/main/Backgru.jpg"  draggable="false">
-        <img class="portfolio-image-2" style="user-select: none;" src="https://raw.githubusercontent.com/grifthtwelve/Repository/main/Backgru3.jpg"  draggable="false">
-        <img class="portfolio-image-3" style="user-select: none;" src="https://raw.githubusercontent.com/grifthtwelve/Repository/main/Backgru5.jpg" draggable="false">
-        <img class="overlay-image" style="user-select: none;" src="https://raw.githubusercontent.com/grifthtwelve/Repository/main/Drawing.png" draggable="false">
-        <img class="vv-image" style="user-select: none;" src="https://raw.githubusercontent.com/grifthtwelve/Repository/main/vv.png" alt="Imagen vv" onclick="scrollToAbout()" draggable="false">
-        <img class="circle-image" style="user-select: none;" src="https://raw.githubusercontent.com/grifthtwelve/Repository/main/Circle.png" alt="Imagen circle" id="circleImage" draggable="false">
-        <img class="plus-image" style="user-select: none;" src="https://raw.githubusercontent.com/grifthtwelve/Repository/main/plus.png" alt="Imagen plus" id="plusImage" onclick="toggleAdditionalGrayRectangle()" draggable="false">
-        <img class="circle-image-gallery" style="user-select: none;" src="https://raw.githubusercontent.com/grifthtwelve/Repository/main/Circle.png" alt="Imagen circle" id="circleImageGallery" draggable="false">
-        <img class="plus-image-gallery" style="user-select: none;" src="https://raw.githubusercontent.com/grifthtwelve/Repository/main/plus.png" alt="Imagen plus" id="plusImageGallery" onclick="toggleAdditionalGrayRectangleGallery()" draggable="false">
-        <img class="circle-image-projects" style="user-select: none;" src="https://raw.githubusercontent.com/grifthtwelve/Repository/main/Circle.png" alt="Imagen circle" id="circleImageProjects" draggable="false">
-        <img class="plus-image-projects" style="user-select: none;" src="https://raw.githubusercontent.com/grifthtwelve/Repository/main/plus.png" alt="Imagen plus" id="plusImageProjects" onclick="toggleAdditionalGrayRectangleProjects()" draggable="false">
-        <img class="settings-image" style="user-select: none;" src="https://raw.githubusercontent.com/grifthtwelve/Repository/main/SettingsWeb.png" alt="Imagen de ajustes" onclick="toggleRectangle()" draggable="false">
-        <img class="close-image" style="user-select: none;" src="https://raw.githubusercontent.com/grifthtwelve/Repository/main/equis.png" alt="Imagen de cerrar" onclick="toggleRectangle()" draggable="false">
-        <div class="additional-gray-rectangle" style="user-select: none;" id="additionalGrayRectangle"></div>
-        <div class="additional-gray-rectangle-gallery" style="user-select: none;" id="additionalGrayRectangleGallery"></div>
-        <div class="additional-gray-rectangle-projects" style="user-select: none;" id="additionalGrayRectangleProjects"></div>
-        <div class="additional-gray-rectangle-contact" style="user-select: none;" id="additionalGrayRectanglecontact"></div>
-        <div class="contactline" style="user-select: none;"></div>
-        <div class="gray-rectangle" id="grayRectangle" style="user-select: none;">
+        <h6 class="developer-text2" id="developerText2" style="max-width: 100%; opacity: 0; transition: opacity 0.5s; pointer-events: none; user-select: none;"><strong>About Me</strong><br><br>Hello! I am Mario, someone passionate and creative with a great taste for web design, programming and graphic design. Since I began to delve into this world, I felt identified with it, because it is quite interesting and offers us many possibilities to expand our knowledge about our businesses and ideas through the digital world.<br><br><strong>What I do?</strong><br>Web Development: I specialize in creating responsive, visually appealing websites that provide the best user experience. I want to include on this page a variety of projects, from personal to complex commerce platforms, and thus show my clients examples and a clear and realistic vision of how their page could look.<br><br>Thank you for being interested in knowing more about me, I hope you have a good experience with me. :)</h6>
+        <img class="portfolio-image" src="https://raw.githubusercontent.com/grifthtwelve/Repository/main/Carpeta1/Backgru.jpg"  draggable="false" style="user-select: none;">
+        <img class="portfolio-image-2" src="https://raw.githubusercontent.com/grifthtwelve/Repository/main/Carpeta1/Backgru3.jpg"  draggable="false" style="user-select: none;">
+        <img class="portfolio-image-3" src="https://raw.githubusercontent.com/grifthtwelve/Repository/main/Carpeta1/Backgru5.jpg" draggable="false" style="user-select: none;">
+        <img class="overlay-image" src="https://raw.githubusercontent.com/grifthtwelve/Repository/main/Carpeta1/Drawing.png" draggable="false" style="user-select: none;">
+        <img class="vv-image" src="https://raw.githubusercontent.com/grifthtwelve/Repository/main/Carpeta1/vv.png" alt="Imagen vv" onclick="scrollToAbout()" draggable="false" style="user-select: none;">
+        <img class="circle-image" src="https://raw.githubusercontent.com/grifthtwelve/Repository/main/Carpeta1/Circle.png" alt="Imagen circle" id="circleImage" draggable="false" style="user-select: none;">
+        <img class="plus-image" src="https://raw.githubusercontent.com/grifthtwelve/Repository/main/Carpeta1/plus.png" alt="Imagen plus" id="plusImage" onclick="toggleAdditionalGrayRectangle()" draggable="false" style="user-select: none;">
+        <img class="circle-image-gallery" src="https://raw.githubusercontent.com/grifthtwelve/Repository/main/Carpeta1/Circle.png" alt="Imagen circle" id="circleImageGallery" draggable="false" style="user-select: none;">
+        <img class="plus-image-gallery" src="https://raw.githubusercontent.com/grifthtwelve/Repository/main/Carpeta1/plus.png" alt="Imagen plus" id="plusImageGallery" onclick="toggleAdditionalGrayRectangleGallery()" draggable="false" style="user-select: none;">
+        <img class="circle-image-projects" src="https://raw.githubusercontent.com/grifthtwelve/Repository/main/Carpeta1/Circle.png" alt="Imagen circle" id="circleImageProjects" draggable="false" style="user-select: none;">
+        <img class="plus-image-projects" src="https://raw.githubusercontent.com/grifthtwelve/Repository/main/Carpeta1/plus.png" alt="Imagen plus" id="plusImageProjects" onclick="toggleAdditionalGrayRectangleProjects()" draggable="false" style="user-select: none;">
+        <img class="settings-image" src="https://raw.githubusercontent.com/grifthtwelve/Repository/main/Carpeta1/SettingsWeb.png" alt="Imagen de ajustes" onclick="toggleRectangle()" draggable="false" style="user-select: none;">
+        <img class="close-image" src="https://raw.githubusercontent.com/grifthtwelve/Repository/main/Carpeta1/equis.png" alt="Imagen de cerrar" onclick="toggleRectangle()" draggable="false" style="user-select: none;">
+        <div class="additional-gray-rectangle" id="additionalGrayRectangle"></div>
+        <div class="additional-gray-rectangle-gallery" id="additionalGrayRectangleGallery"></div>
+        <div class="additional-gray-rectangle-projects" id="additionalGrayRectangleProjects"></div>
+        <div class="additional-gray-rectangle-contact" id="additionalGrayRectanglecontact"></div>
+        <div class="contactline"></div>
+        <div class="gray-rectangle" id="grayRectangle">
             <div class="nav-words">
-                <span class="nav-word" style="user-select: none;" onclick="scrollToTop()">HOME</span>
-                <span class="nav-word about" style="user-select: none;" onclick="scrollToAbout()">ABOUT</span>
-                <span class="nav-word gallery" style="user-select: none;" onclick="scrollToGallery()">GALLERY</span>
-                <span class="nav-word projects" style="user-select: none;" onclick="scrollToProjects()">PROJECTS</span>
-                <span class="nav-word" style="user-select: none;" onclick="scrollToContact()">CONTACT</span>
+                <span class="nav-word" onclick="scrollToTop()" style="user-select: none;">HOME</span>
+                <span class="nav-word about" onclick="scrollToAbout()" style="user-select: none;">ABOUT</span>
+                <span class="nav-word gallery" onclick="scrollToGallery()" style="user-select: none;">GALLERY</span>
+                <span class="nav-word projects" onclick="scrollToProjects()" style="user-select: none;">PROJECTS</span>
+                <span class="nav-word" onclick="scrollToContact()" style="user-select: none;">CONTACT</span>
             </div>
         </div>
     </div>
-    <div class="nav-wordssocial" translate="no">
+    <div class="nav-wordssocial">
         <span class="nav-word" onclick="window.open('https://www.instagram.com/grifthcode/', '_blank')" style="user-select: none;">
-            <img src="https://raw.githubusercontent.com/grifthtwelve/Repository/main/instagram.png" alt="Instagram" style="vertical-align: middle; width: 30px; height: 30px; margin-right: 10px;" draggable="false">
+            <img src="https://raw.githubusercontent.com/grifthtwelve/Repository/main/Carpeta1/instagram.png" alt="Instagram" style="vertical-align: middle; width: 30px; height: 30px; margin-right: 10px;" draggable="false" style="user-select: none;">
             INSTAGRAM
         </span>
-        <span class="nav-wordz" onclick="window.open('https://www.facebook.com/profile.php?id=61561032840288', '_blank' )" style="user-select: none;">
-            <img src="https://raw.githubusercontent.com/grifthtwelve/Repository/main/facebook.png" alt="Facebook" style="vertical-align: middle; width: 45px; height: 45px; margin-right: 10px;" draggable="false">
+        <span class="nav-word" onclick="window.open('https://www.facebook.com/profile.php?id=61561032840288', '_blank')" style="user-select: none;">
+            <img src="https://raw.githubusercontent.com/grifthtwelve/Repository/main/Carpeta1/facebook.png" alt="Facebook" style="vertical-align: middle; width: 45px; height: 45px; margin-right: 10px;" draggable="false" style="user-select: none;">
             FACEBOOK
         </span>
-        <span class="nav-wordz" onclick="window.open('https://x.com/GrifthCode', '_blank')" style="user-select: none;">
-            <img src="https://raw.githubusercontent.com/grifthtwelve/Repository/main/gmail.png" alt="Gmail" style="vertical-align: middle; width: 30px; height: 30px; margin-right: 10px;" draggable="false">
+        <span class="nav-word" onclick="window.open('https://x.com/GrifthCode', '_blank')" style="user-select: none;">
+            <img src="https://raw.githubusercontent.com/grifthtwelve/Repository/main/Carpeta1/gmail.png" alt="Gmail" style="vertical-align: middle; width: 30px; height: 30px; margin-right: 10px;" draggable="false" style="user-select: none;">
             TWITTER
         </span>
     </div>
@@ -707,8 +683,8 @@
                 plusImage.style.transition = 'transform 0.5s';
                 circleImage.style.transform = 'translateY(0) translateX(-50%)';
                 plusImage.style.transform = 'translateY(0) translateX(-50%)';
-                circleImage.src = 'https://raw.githubusercontent.com/grifthtwelve/Repository/main/Circle.png';
-                plusImage.src = 'https://raw.githubusercontent.com/grifthtwelve/Repository/main/plus.png';
+                circleImage.src = 'https://raw.githubusercontent.com/grifthtwelve/Repository/main/Carpeta1/Circle.png';
+                plusImage.src = 'https://raw.githubusercontent.com/grifthtwelve/Repository/main/Carpeta1/plus.png';
             } else {
                 grayRectangle.classList.add('show');
                 circleImage.style.opacity = 1;
@@ -718,8 +694,8 @@
                 plusImage.style.transition = 'transform 0.5s';
                 circleImage.style.transform = 'translateY(60px) translateX(-50%)';
                 plusImage.style.transform = 'translateY(60px) translateX(-50%)';
-                circleImage.src = 'https://raw.githubusercontent.com/grifthtwelve/Repository/main/Circle2.png';
-                plusImage.src = 'https://raw.githubusercontent.com/grifthtwelve/Repository/main/minus.png';
+                circleImage.src = 'https://raw.githubusercontent.com/grifthtwelve/Repository/main/Carpeta1/Circle2.png';
+                plusImage.src = 'https://raw.githubusercontent.com/grifthtwelve/Repository/main/Carpeta1/minus.png';
             }
         }
 
@@ -736,8 +712,8 @@
                 plusImageGallery.style.transition = 'transform 0.5s';
                 circleImageGallery.style.transform = 'translateY(0) translateX(-50%)';
                 plusImageGallery.style.transform = 'translateY(0) translateX(-50%)';
-                circleImageGallery.src = 'https://raw.githubusercontent.com/grifthtwelve/Repository/main/Circle.png';
-                plusImageGallery.src = 'https://raw.githubusercontent.com/grifthtwelve/Repository/main/plus.png';
+                circleImageGallery.src = 'https://raw.githubusercontent.com/grifthtwelve/Repository/main/Carpeta1/Circle.png';
+                plusImageGallery.src = 'https://raw.githubusercontent.com/grifthtwelve/Repository/main/Carpeta1/plus.png';
             } else {
                 grayRectangleGallery.classList.add('show');
                 circleImageGallery.style.opacity = 1;
@@ -746,8 +722,8 @@
                 plusImageGallery.style.transition = 'transform 0.5s';
                 circleImageGallery.style.transform = 'translateY(60px) translateX(-50%)';
                 plusImageGallery.style.transform = 'translateY(60px) translateX(-50%)';
-                circleImageGallery.src = 'https://raw.githubusercontent.com/grifthtwelve/Repository/main/Circle2.png';
-                plusImageGallery.src = 'https://raw.githubusercontent.com/grifthtwelve/Repository/main/minus.png';
+                circleImageGallery.src = 'https://raw.githubusercontent.com/grifthtwelve/Repository/main/Carpeta1/Circle2.png';
+                plusImageGallery.src = 'https://raw.githubusercontent.com/grifthtwelve/Repository/main/Carpeta1/minus.png';
             }
         }
 
@@ -764,8 +740,8 @@
                 plusImageProjects.style.transition = 'transform 0.5s';
                 circleImageProjects.style.transform = 'translateY(0) translateX(-50%)';
                 plusImageProjects.style.transform = 'translateY(0) translateX(-50%)';
-                circleImageProjects.src = 'https://raw.githubusercontent.com/grifthtwelve/Repository/main/Circle.png';
-                plusImageProjects.src = 'https://raw.githubusercontent.com/grifthtwelve/Repository/main/plus.png';
+                circleImageProjects.src = 'https://raw.githubusercontent.com/grifthtwelve/Repository/main/Carpeta1/Circle.png';
+                plusImageProjects.src = 'https://raw.githubusercontent.com/grifthtwelve/Repository/main/Carpeta1/plus.png';
             } else {
                 grayRectangleProjects.classList.add('show');
                 circleImageProjects.style.opacity = 1;
@@ -774,8 +750,8 @@
                 plusImageProjects.style.transition = 'transform 0.5s';
                 circleImageProjects.style.transform = 'translateY(60px) translateX(-50%)';
                 plusImageProjects.style.transform = 'translateY(60px) translateX(-50%)';
-                circleImageProjects.src = 'https://raw.githubusercontent.com/grifthtwelve/Repository/main/Circle2.png';
-                plusImageProjects.src = 'https://raw.githubusercontent.com/grifthtwelve/Repository/main/minus.png';
+                circleImageProjects.src = 'https://raw.githubusercontent.com/grifthtwelve/Repository/main/Carpeta1/Circle2.png';
+                plusImageProjects.src = 'https://raw.githubusercontent.com/grifthtwelve/Repository/main/Carpeta1/minus.png';
             }
         }
         document.getElementById('plusImage').addEventListener('mouseover', function() {
