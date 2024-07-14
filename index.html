@@ -538,11 +538,11 @@
         <div class="contactline" style="-webkit-tap-highlight-color: transparent;"></div>
         <div class="gray-rectangle" id="grayRectangle" style="-webkit-tap-highlight-color: transparent;">
             <div class="nav-words" style="-webkit-tap-highlight-color: transparent;">
-                <span class="nav-word" onclick="scrollToTop()" style="user-select: none; -webkit-tap-highlight-color: transparent;">HOME</span>
-                <span class="nav-word about" onclick="scrollToAbout()" style="user-select: none; -webkit-tap-highlight-color: transparent;">ABOUT</span>
-                <span class="nav-word gallery" onclick="scrollToGallery()" style="user-select: none; -webkit-tap-highlight-color: transparent;">GALLERY</span>
-                <span class="nav-word projects" onclick="scrollToProjects()" style="user-select: none; -webkit-tap-highlight-color: transparent;">PROJECTS</span>
-                <span class="nav-word" onclick="scrollToContact()" style="user-select: none; -webkit-tap-highlight-color: transparent;">CONTACT</span>
+                <span class="nav-word" onclick="scrollToTop(); highlightWord(this);" style="user-select: none; -webkit-tap-highlight-color: transparent;">HOME</span>
+                <span class="nav-word about" onclick="scrollToAbout(); highlightWord(this);" style="user-select: none; -webkit-tap-highlight-color: transparent;">ABOUT</span>
+                <span class="nav-word gallery" onclick="scrollToGallery(); highlightWord(this);" style="user-select: none; -webkit-tap-highlight-color: transparent;">GALLERY</span>
+                <span class="nav-word projects" onclick="scrollToProjects(); highlightWord(this);" style="user-select: none; -webkit-tap-highlight-color: transparent;">PROJECTS</span>
+                <span class="nav-word" onclick="scrollToContact(); highlightWord(this);" style="user-select: none; -webkit-tap-highlight-color: transparent;">CONTACT</span>
             </div>
         </div>
     </div>
@@ -768,6 +768,15 @@
                 plusImageProjects.src = 'https://raw.githubusercontent.com/grifthtwelve/Repository/main/Carpeta1/minus.png';
             }
         }
+
+        function highlightWord(selectedWord) {
+            var navWords = document.querySelectorAll('.nav-word');
+            navWords.forEach(function(word) {
+                word.style.fontWeight = '300'; // Reset font weight to original
+            });
+            selectedWord.style.fontWeight = '500'; // Increase font weight by 200
+        }
+
         document.getElementById('plusImage').addEventListener('mouseover', function() {
         });
 
